@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRUTr Calculator Pro</title>
+    <link rel="stylesheet" href="../css/calculator.css">
+</head>
+<body>
+    <!-- Title Section -->
+    <header>
+        <h1 id="main-title">KRUTr Calculator Pro</h1>
+        <button id="toggle-dark-mode">Toggle Dark Mode</button>
+    </header>
+
+    <!-- Calculator Section -->
+    <section id="calculators">
+        <!-- Calculator 1 -->
+        <div class="calculator" id="calc1">
+            <h2>Max Pay Rate Calculator</h2>
+            <input type="number" id="calc1_billRate" placeholder="Max Bill Rate (USD)">
+            <input type="number" id="calc1_discount" placeholder="Discounts to Client (%)">
+            <input type="number" id="calc1_msp" placeholder="MSP/VMS Fees (%)">
+            <input type="number" id="calc1_load" placeholder="Load on Pay Rate (%)">
+            <input type="number" id="calc1_markup" placeholder="Mark Up (%)">
+            <label>Desired Margin (USD): <span id="calc1_margin_val">0</span></label>
+            <input type="range" min="0" max="500" value="0" id="calc1_margin_slider">
+            <input type="number" id="calc1_margin_input" placeholder="Margin Input (USD)">
+            <button class="calculate-btn" id="calc1_calculate">Calculate</button>
+        </div>
+
+        <!-- Calculator 2 -->
+        <div class="calculator" id="calc2">
+            <h2>Bill Rate Calculator</h2>
+            <input type="number" id="calc2_payRate" placeholder="Candidate Pay Rate (USD)">
+            <input type="number" id="calc2_billRate" placeholder="Max Bill Rate (USD)">
+            <input type="number" id="calc2_discount" placeholder="Discounts to Client (%)">
+            <input type="number" id="calc2_msp" placeholder="MSP/VMS Fees (%)">
+            <input type="number" id="calc2_load" placeholder="Load on Pay Rate (%)">
+            <input type="number" id="calc2_markup" placeholder="Mark Up (%)">
+            <label>Desired Margin (USD): <span id="calc2_margin_val">0</span></label>
+            <input type="range" min="0" max="500" value="0" id="calc2_margin_slider">
+            <input type="number" id="calc2_margin_input" placeholder="Margin Input (USD)">
+            <button class="calculate-btn" id="calc2_calculate">Calculate</button>
+        </div>
+
+        <!-- Calculator 3 -->
+        <div class="calculator" id="calc3">
+            <h2>Margin Calculator</h2>
+            <input type="number" id="calc3_payRate" placeholder="Candidate Pay Rate (USD)">
+            <input type="number" id="calc3_billRate" placeholder="Bill Rate (USD)">
+            <input type="number" id="calc3_discount" placeholder="Discounts to Client (%)">
+            <input type="number" id="calc3_msp" placeholder="MSP/VMS Fees (%)">
+            <input type="number" id="calc3_load" placeholder="Load on Pay Rate (%)">
+            <button class="calculate-btn" id="calc3_calculate">Calculate</button>
+        </div>
+    </section>
+
+    <!-- Result Section -->
+    <section id="result">
+        <h2>Results</h2>
+        <div id="results-display"></div>
+        <div id="log-display"></div>
+    </section>
+
+    <!-- Preset Sections -->
+    <section id="presets">
+        <!-- Create Preset -->
+        <div id="create-preset">
+            <h2>Create User Preset</h2>
+            <input type="text" id="preset_client" placeholder="Client Name">
+            <input type="number" id="preset_markup" placeholder="Mark Up (%)">
+            <input type="number" id="preset_discount" placeholder="Discounts to Client (%)">
+            <input type="number" id="preset_msp" placeholder="MSP/VMS Fees (%)">
+            <input type="number" id="preset_load" placeholder="Load on Pay Rate (%)">
+            <button id="download-preset">Download Preset</button>
+        </div>
+
+        <!-- Upload Preset -->
+        <div id="upload-preset">
+            <h2>Upload User Preset</h2>
+            <input type="file" id="upload_json">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 KRUTr Calculator Pro. All rights reserved.</p>
+    </footer>
+
+    <script src="../javascript/calculator.js"></script>
+</body>
+</html>
