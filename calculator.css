@@ -15,7 +15,9 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 20px;
     background-color: #282c34;
 }
@@ -23,8 +25,14 @@ header {
 #main-title {
     font-size: 2.5em;
     color: #61dafb;
+    margin-bottom: 10px;
 }
 
+#toggle-dark-mode {
+    align-self: flex-end;
+}
+
+/* Buttons */
 button {
     padding: 10px 20px;
     border: none;
@@ -42,13 +50,23 @@ button:hover {
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .calculator {
     background-color: #fff;
-    padding: 20px;
+    padding: 30px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .calculator:hover {
@@ -56,34 +74,61 @@ button:hover {
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
-input {
-    display: block;
+.calculator input,
+.calculator button,
+.calculator label {
     margin: 10px 0;
+}
+
+input {
     padding: 10px;
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
+.calculate-btn {
+    margin-top: auto;
+}
+
+/* Result Section */
 #result {
-    margin: 20px;
-    padding: 20px;
+    margin: 20px auto;
+    padding: 30px;
     background-color: #eef;
     box-shadow: 0 0 10px rgba(0, 0, 255, 0.3);
     border-radius: 10px;
-    transition: box-shadow 0.3s ease;
+    max-width: 90%;
+    font-size: 1.1em;
 }
 
-#results-display p {
-    font-size: 1.2em;
-}
-
+/* Presets Section */
 #presets {
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
+#create-preset,
+#upload-preset {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+#create-preset input,
+#upload-preset input,
+#create-preset button {
+    margin: 10px 0;
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 10px;
